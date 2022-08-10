@@ -50,6 +50,49 @@ Another common editor. But for some reason I do not use it much, but you might w
 ``less``
 ^^^^^^^^
 A viewer. No editing. It just prints a text-file in the terminal. I often use ``less`` to look into ``FITS`` files because the headers in FITS files are just text. You just have to adjust the number of colums of your terminal to get a good look into a ``FITS``-header.
+Example:
+
+::
+
+    XTENSION= 'BINTABLE'           / binary table extension                         
+    BITPIX  =                    8 / 8-bit bytes                                    
+    NAXIS   =                    2 / 2-dimensional binary table                     
+    NAXIS1  =                 1392 / width of table in bytes                        
+    NAXIS2  =                    1 / number of rows in table                        
+    PCOUNT  =                    0 / size of special data area                      
+    GCOUNT  =                    1 / one data group (required keyword)              
+    TFIELDS =                    5 / number of fields in each row                   
+    TTYPE1  = 'ENERG_LO'           / label for field   1                            
+    TFORM1  = '42E     '           / data format of field: 4-byte REAL              
+    TUNIT1  = 'TeV     '           / physical unit of field                         
+    TTYPE2  = 'ENERG_HI'           / label for field   2                            
+    TFORM2  = '42E     '           / data format of field: 4-byte REAL              
+    TUNIT2  = 'TeV     '           / physical unit of field                         
+    TTYPE3  = 'THETA_LO'           / label for field   3                            
+    TFORM3  = '6E      '           / data format of field: 4-byte REAL              
+    TUNIT3  = 'deg     '           / physical unit of field                         
+    TTYPE4  = 'THETA_HI'           / label for field   4                            
+    TFORM4  = '6E      '           / data format of field: 4-byte REAL              
+    TUNIT4  = 'deg     '           / physical unit of field                         
+    TTYPE5  = 'EFFAREA '           / label for field   5                            
+    TFORM5  = '252E    '           / data format of field: 4-byte REAL              
+    TUNIT5  = 'm**2    '           / physical unit of field                         
+    EXTNAME = 'EFFECTIVE AREA'     / name of this binary table extension            
+    TDIM5   = '(42,6)  '           / size of the multidimensional array             
+    TELESCOP= 'CTA     '           / Name of telescope                              
+    INSTRUME= 'Southern Array'     / Instrument                                     
+    AUTHOR  = 'G.Maier '           / Author                                         
+    ORIGIN  = 'CTAO    '           / Origin                                         
+    DATE    = '2021-07-29T12:49:25' / File creation date (YYYY-MM-DDThh:mm:ss UTC)  
+    HDUDOC  = 'https://github.com/open-gamma-ray-astro/gamma-astro-data-formats'    
+    HDUVERS = '0.2     '           / HDU version                                    
+    HDUCLASS= 'GADF    '           / HDUCLASS                                       
+    HDUCLAS1= 'RESPONSE'           / HDUCLAS1                                       
+    HDUCLAS2= 'EFF_AREA'           / HDUCLAS2                                       
+    HDUCLAS3= 'FULL-ENCLOSURE'     / HDUCLAS3                                       
+    HDUCLAS4= 'AEFF_2D '           / HDUCLAS4                                       
+    END 
+
 
 ``hexdump``
 ^^^^^^^^^^^
