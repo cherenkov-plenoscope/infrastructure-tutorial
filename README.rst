@@ -97,7 +97,10 @@ Here is an example with my terminal set to 80-columns calling ``less ./Prod5-Sou
 ``hexdump``
 ^^^^^^^^^^^
 A viewer. No editing. Very powerful for debugging. Use it with the ``-c`` option to see each character including the control-characters, such as ``\n`` explicitly.
-* ``wc`` A counter. I use it to count the number of lines in a textfile using the ``-l`` option. It prints the number of lines in the terminal.
+
+``wc``
+^^^^^^
+A counter. I use it to count e.g. the number of lines in a textfile using the ``-l`` option. It prints the number of lines in the terminal.
 
 
 Communicating with a remote computer
