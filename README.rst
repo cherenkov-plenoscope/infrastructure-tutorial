@@ -171,7 +171,7 @@ and then finally perform the atomic move
 
     user@remote:~$ mv ./source/result.csv.incomplete ./destination/result.csv
 
-To abstract this away, I use a tiny ``python`` network-file-system-library_.
+To abstract this away, I made a tiny ``python`` network-file-system-library_ to have a safe ``nfs.copy()`` and ``nfs.move()``.
 
 ::
 
