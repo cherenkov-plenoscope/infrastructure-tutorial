@@ -174,6 +174,7 @@ and then finally perform the atomic move
 To abstract this away, I use a tiny ``python`` network-file-system-library_.
 
 ::
+
     import uuid
     import os
     import shutil
