@@ -104,11 +104,17 @@ Configure ``screen`` using the ``~/.screenrc``:
 
 job-queues
 ==========
-Job-queues are powerful tools to allow parallel computing on a compute-cluster while respecting fair-share with other users.
+Job-queues are powerful to do parallel computing on a compute-cluster.
+They also allow to fair-share resources with other users.
+You need to accept that there are many different and incompatible job-queues.
+For this reason it is very important that the specific needs of your job-queue do not spread across your entire code, but are concentrated in small spot.
+This way you, and your colleagues have a realistic chance to make the stuff run on a different compute-cluster with a different job-queue.
 
 batch-tools
 -----------
-There exist tools which help with using job-queues, but you have to make sure that the tool respects the fair-share.
+There exist batch-tools which help with using job-queues.
+Often batch-tools abstract away from your specific job-queue and might support different flavours out of the box.
+But you have to make sure that the tool respects the fair-share.
 Some tools assume that you are the sole user and thus will always keep jobs alive waiting for your workload.
 Your colleages will not like this. In all scientific clusters I know of you are expected to end jobs when the computation is done.
 
