@@ -103,7 +103,34 @@ A viewer. No editing. Very powerful for debugging. Use it with the ``-c`` option
 A counter. I use it to count e.g. the number of lines in a textfile using the ``-l`` option. It prints the number of lines in the terminal.
 
 
+Your terminal
+=============
+
+
 Communicating with a remote computer
 ====================================
+
+copying files with ``rsync -a``
+----------------------------
+
+Screen
+======
+Usually when you connect to a remote machine and send it a command via ``ssh``, the remote will no longer execute your command when the connection to your local machine ends.
+The program ``screen`` is one possible way to start a command on the remote machine, log off from the remote, and have your command keep on executing.
+Further, ``screeen`` allows you to 'meet' and interact with another person who logs into the same useraccount on the remote.
+You can see what the person types in the terminal in real-time.
+This can be very useful for operating a remote instrument, such as a telescope, while you also have a voice-chat with the other person.
+
+Configure ``screen`` using the ``~/.screenrc``:
+
+::
+
+    some
+
+
+chron
+=====
+The program chron can be used to execute your commands on the remote in certain time-intervalls without the need for you to log into the remote. I use ``chron`` e.g. to do automatic backups of my ``github.com`` repositories to our institute's storage.
+
 
 
