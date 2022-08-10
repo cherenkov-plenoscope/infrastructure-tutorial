@@ -7,7 +7,7 @@ Abstract
 Text-files
 ==========
 Most configurations on your local and remote computer are written in text-files.
-It is important that you are familiar with text-editors that run without a graphical-user-interface (GUI) in an x-server, but directly in the terminal. Especially when you share text-files with others, who might use other editors, you must be aware of pitfalls regarding newlines and whitespaces.
+It is important that you are familiar with text-editors that run without a graphical-user-interface (GUI) in an x-server, but directly in the terminal. When you share text-files with others, who might use other editors, you must be aware of pitfalls regarding newlines and whitespaces.
 
 Newlines
 --------
@@ -26,8 +26,8 @@ Do not make your text-editor replace control-characters by default.
 E.g. replacing spaces with tabs in code.
 This creates massive diffs which obfuscate your intendet modification to the code. 
 
-Tools I use
------------
+Text-editors and viewers that I use
+-----------------------------------
 
 ``vim``
 ^^^^^^^
