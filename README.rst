@@ -130,17 +130,25 @@ Configure ``screen`` using the ``~/.screenrc``:
 
 job-queues
 ==========
-Job-queues are powerful tools to allow parallel computing on a compute cluster while respecting fair-share with other users.
-There exist many tools in industry which do help with using job-queues such as the sun-grid-endgine's ``qsub``, but as far as I can tell most of them break the fair-share and thus disqualify for our use in science.
+Job-queues are powerful tools to allow parallel computing on a compute-cluster while respecting fair-share with other users.
 
-Examples are:
+batch-tools
+-----------
+There exist tools which help with using job-queues, but you have to make sure that the tool respects the fair-share.
+Some tools assume that you are the sole user and thus will always keep jobs alive waiting for your workload.
+Your colleages will not like this. In all scientific clusters I know of you are expected to end jobs when the computation is done.
 
-- Dask_
-- pyABC.sge_
-- ipyparallel_
+Tools for the ``sun-grid-engine`` that do respect fair-share:
 
-As far as I see it the job-queues used in science are different from the ones used in most industrial environments.
-The difference is, that most helper-tools assume that you are the sole user of the compute-cluster and thus highjack the compute-nodes and idle until you submit jobs. Do not do this on a fair-share-cluster!
+- queue_map_reduce-library_ for python. Minimal, can only do emberrasingly simple parallel computes. For me, this is enough.
+- ???make for python. Versatile, but needs infrastructure to setup and to learn a 'makefile' like script language.
+
+
+qstat
+-----
+Note that the  sun-grid-engine's ``qstat`` can return machine readable output using the ``-xml`` option.
+With this you can inspect and organize your jobs on your own when you have more complicated demands than emberrasingly simple parallel computes. There is a python-parser for qstat_. 
+
 
 chron
 =====
@@ -235,3 +243,7 @@ To abstract this away, I made a tiny ``python`` network-file-system-library_ to 
 .. _pyABC.sge: https://pyabc.readthedocs.io/en/latest/api_sge.html
 
 .. _ipyparallel: https://ipyparallel.readthedocs.io/en/latest/index.html
+
+.. _qstat: https://pypi.org/project/qstat/
+
+.. _queue_map_reduce-library: https://github.com/cherenkov-plenoscope/queue_map_reduce
