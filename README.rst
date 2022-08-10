@@ -54,31 +54,7 @@ Here is an example with my terminal set to 80-columns calling ``less ./Prod5-Sou
 
 ::
 
-    XTENSION= 'BINTABLE'           / binary table extension                         
-    BITPIX  =                    8 / 8-bit bytes                                    
-    NAXIS   =                    2 / 2-dimensional binary table                     
-    NAXIS1  =                 1392 / width of table in bytes                        
-    NAXIS2  =                    1 / number of rows in table                        
-    PCOUNT  =                    0 / size of special data area                      
-    GCOUNT  =                    1 / one data group (required keyword)              
-    TFIELDS =                    5 / number of fields in each row                   
-    TTYPE1  = 'ENERG_LO'           / label for field   1                            
-    TFORM1  = '42E     '           / data format of field: 4-byte REAL              
-    TUNIT1  = 'TeV     '           / physical unit of field                         
-    TTYPE2  = 'ENERG_HI'           / label for field   2                            
-    TFORM2  = '42E     '           / data format of field: 4-byte REAL              
-    TUNIT2  = 'TeV     '           / physical unit of field                         
-    TTYPE3  = 'THETA_LO'           / label for field   3                            
-    TFORM3  = '6E      '           / data format of field: 4-byte REAL              
-    TUNIT3  = 'deg     '           / physical unit of field                         
-    TTYPE4  = 'THETA_HI'           / label for field   4                            
-    TFORM4  = '6E      '           / data format of field: 4-byte REAL              
-    TUNIT4  = 'deg     '           / physical unit of field                         
-    TTYPE5  = 'EFFAREA '           / label for field   5                            
-    TFORM5  = '252E    '           / data format of field: 4-byte REAL              
-    TUNIT5  = 'm**2    '           / physical unit of field                         
-    EXTNAME = 'EFFECTIVE AREA'     / name of this binary table extension            
-    TDIM5   = '(42,6)  '           / size of the multidimensional array             
+    ...            
     TELESCOP= 'CTA     '           / Name of telescope                              
     INSTRUME= 'Southern Array'     / Instrument                                     
     AUTHOR  = 'G.Maier '           / Author                                         
@@ -92,6 +68,7 @@ Here is an example with my terminal set to 80-columns calling ``less ./Prod5-Sou
     HDUCLAS3= 'FULL-ENCLOSURE'     / HDUCLAS3                                       
     HDUCLAS4= 'AEFF_2D '           / HDUCLAS4                                       
     END 
+    ...
 
 
 ``hexdump``
