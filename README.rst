@@ -128,6 +128,20 @@ Configure ``screen`` using the ``~/.screenrc``:
     some
 
 
+job-queues
+==========
+Job-queues are powerful tools to allow parallel computing on a compute cluster while respecting fair-share with other users.
+There exist many tools in industry which do help with using job-queues such as the sun-grid-endgine's ``qsub``, but as far as I can tell most of them break the fair-share and thus disqualify for our use in science.
+
+Examples are:
+
+- Dask_
+- pyABC.sge_
+- ipyparallel_
+
+As far as I see it the job-queues used in science are different from the ones used in most industrial environments.
+The difference is, that most helper-tools assume that you are the sole user of the compute-cluster and thus highjack the compute-nodes and idle until you submit jobs. Do not do this on a fair-share-cluster!
+
 chron
 =====
 The program chron can be used to execute your commands on the remote in certain time-intervalls without the need for you to log into the remote. I use ``chron`` e.g. to do automatic backups of my ``github.com`` repositories to our institute's storage.
@@ -215,3 +229,9 @@ To abstract this away, I made a tiny ``python`` network-file-system-library_ to 
 
 
 .. _network-file-system-library: https://github.com/cherenkov-plenoscope/starter_kit/blob/main/plenoirf/plenoirf/network_file_system.py
+
+.. _Dask: https://docs.dask.org/en/latest/
+
+.. _pyABC.sge: https://pyabc.readthedocs.io/en/latest/api_sge.html
+
+.. _ipyparallel: https://ipyparallel.readthedocs.io/en/latest/index.html
