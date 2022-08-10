@@ -18,11 +18,32 @@ Most common in the linux is the ``\n`` newline indicator.
 Tools I use
 -----------
 
-* ``vim``
-* ``emacs``
-* ``less``
-* ``hexdump``
-* ``wc``
+``vim``
+^^^^^^^
+A common editor. It can be customized using the text-file ``~/.vimrc``.
+::
+    syntax on
+    set nu
+    highlight ExtraWhitespace ctermbg=red guibg=red
+    match ExtraWhitespace /\s\+$/
+    set list
+    set listchars=eol:⏎,tab:␉·,trail:␠,nbsp:⎵
+
+
+
+``emacs``
+^^^^^^^^^
+Another common editor. But for some reason I do not use it much, but you might want to give it a try.
+
+``less``
+^^^^^^^^
+A viewer. No editing. It just prints a text-file in the terminal. I often use ``less`` to look into ``FITS`` files because the headers in FITS files are just text. You just have to adjust the number of colums of your terminal to get a good look into a ``FITS``-header.
+
+``hexdump``
+^^^^^^^^^^^
+A viewer. No editing. Very powerful for debugging. Use it with the ``-c`` option to see each character including the control-characters, such as ``\n`` explicitly.
+* ``wc`` A counter. I use it to count the number of lines in a textfile using the ``-l`` option. It prints the number of lines in the terminal.
+
 
 Communicating with a remote computer
 ====================================
