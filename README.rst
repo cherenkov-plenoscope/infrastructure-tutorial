@@ -19,15 +19,12 @@ Whitespaces
 -----------
 Be aware that there a multiple whitespaces [``' '``, ``\t``, ``\eol``, ... ] which might be undistinguishable in some editors and viewers but that might effect your programs that read the text-file. To avoid surprises I usually make my text-editors show these explicitly.
 
-Tip for version-control
------------------------
-Set your text-editor to not change anything on its own.
-Do not make your text-editor replace control-characters by default.
-E.g. replacing spaces with tabs in code.
-This creates massive diffs which obfuscate your intendet modification to the code. 
-
 Text-editors and viewers that I use
 -----------------------------------
+In general, set your text-editor to not change anything on its own.
+Do not make your text-editor replace control-characters by default.
+E.g. replacing spaces with tabs in code.
+This creates massive diffs in version-control which obfuscate your intendet modification to the code. 
 
 ``vim``
 ^^^^^^^
