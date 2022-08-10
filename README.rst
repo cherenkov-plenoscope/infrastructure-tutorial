@@ -48,7 +48,7 @@ Another common editor. But for some reason I do not use it much, but you might w
 
 ``less``
 ^^^^^^^^
-A viewer. No editing. It just prints a text-file in the terminal. I often use ``less`` to look into ``FITS`` files because the headers in FITS files are just text. You just have to adjust the number of colums of your terminal to get a good look into a ``FITS``-header.
+A viewer. No editing. It just prints a text-file in the terminal. I often use ``less`` to look into ``FITS`` files because the headers are text. You have to adjust the number of colums of your terminal to get a good look into a ``FITS``-header.
 
 Here is an example with my terminal set to 80-columns calling ``less ./Prod5-South-20deg-AverageAz-14MSTs37SSTs.1800s-v0.1.fits``
 
