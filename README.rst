@@ -131,6 +131,49 @@ Configure ``screen`` using the ``~/.screenrc``:
 chron
 =====
 The program chron can be used to execute your commands on the remote in certain time-intervalls without the need for you to log into the remote. I use ``chron`` e.g. to do automatic backups of my ``github.com`` repositories to our institute's storage.
+It is important to know that ``chron`` will not load your ``~/.bashrc`` or any other settings of your environment when it executes your command.
+
+
+Network-file-system
+===================
+
+map and reduce in parallel computing
+-------------------------------------
+
+atomic move
+-----------
+Let's say you got a job/command running on the remote which is writing an output-file named ``./result.csv``.
+Let us assume that your job just started to write the output-file. Writing takes some time, it is not atomic. Now let us assume further that your job dies right now before it finnished writing the output-file.
+Now there exists a file in the filesystem correctly named ``./result.csv`` which is incomplete.
+When you are not lucky, the next program will read ``./result.csv``, will not realize that it is incomplete, and will give you a wrong result.
+Sounds unlikely? No. This is everyday business on a fair-share-cluster.
+
+The solution is to make an atomic ``mv`` move in the filesystem.
+The idea is simply to not write a file named ``./result.csv`` but to write a file named ``./result.csv.incomplete``.
+And after it is written you perform an atomic move ``mv ./result.csv.incomplete ./result.csv``.
+
+So far so good. But in case this final move does not happen in the same directory, the move might not be atomic in a network-file-system.
+
+::
+
+    user@remote:~$ mv ./source/result.csv.incomplete ./destination/result.csv
+
+In your network-file-system ``./source`` and ``./destination`` might cross hidden boundaries of the hardware which prevent the atomic move.
+In a network-file-system you first have to copy
+
+::
+
+    rsync -a ./source/result.csv.incomplete ./destination/result.csv.incomplete
+
+and then finally perform the atomic move
+
+::
+
+    mv ./source/result.csv.incomplete ./destination/result.csv
+
+To abstract this away, I use a tiny ``python`` library.
+
+
 
 
 
