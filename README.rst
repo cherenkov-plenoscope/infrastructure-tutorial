@@ -163,13 +163,13 @@ In a network-file-system you first have to copy
 
 ::
 
-    rsync -a ./source/result.csv.incomplete ./destination/result.csv.incomplete
+    user@remote:~$ rsync -a ./source/result.csv.incomplete ./destination/result.csv.incomplete
 
 and then finally perform the atomic move
 
 ::
 
-    mv ./source/result.csv.incomplete ./destination/result.csv
+    user@remote:~$ mv ./source/result.csv.incomplete ./destination/result.csv
 
 To abstract this away, I use a tiny ``python`` library.
 
