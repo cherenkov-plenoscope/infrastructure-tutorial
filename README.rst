@@ -7,7 +7,7 @@ Abstract
 Text-files
 ==========
 Most configurations on your local and remote computer are written in text-files.
-It is important that you are familiar with text-editors that run without a graphical-user-interface (GUI) in an x-server, but directly in the terminal.
+It is important that you are familiar with text-editors that run without a graphical-user-interface (GUI) in an x-server, but directly in the terminal. Especially when you share text-files with others, who might use other editors, you must be aware of pitfalls regarding newlines and whitespaces.
 
 Newlines
 --------
@@ -15,12 +15,23 @@ A big pitfall with text-files are the multiple ways to indicate that a newline i
 The text-editors on your local machine might use a different newline indicator than your remote machine.
 Most common in the linux is the ``\n`` newline indicator. 
 
+Whitespaces
+-----------
+Be aware that there a multiple whitespaces [``' '``, ``\t``, ``\eol``, ... ] which might be undistinguishable in some editors and viewers but that might effect your programs that read the text-file. To avoid surprises I usually make my text-editors show these explicitly.
+
+Tip for version-control
+-----------------------
+Set your text-editor to not change anything on its own.
+Do not make your text-editor replace control-characters by default.
+E.g. replacing spaces with tabs in code.
+This creates massive diffs which obfuscate your intendet modification to the code. 
+
 Tools I use
 -----------
 
 ``vim``
 ^^^^^^^
-A common editor. It can be customized using the text-file ``~/.vimrc``.
+A common editor. It can be customized using the text-file ``~/.vimrc``. This is my ``~/.vimrc``:
 ::
     syntax on
     set nu
@@ -29,6 +40,7 @@ A common editor. It can be customized using the text-file ``~/.vimrc``.
     set list
     set listchars=eol:⏎,tab:␉·,trail:␠,nbsp:⎵
 
+It makes vim show the linenumbers and makes vim show whitespaces explicitly.
 
 
 ``emacs``
