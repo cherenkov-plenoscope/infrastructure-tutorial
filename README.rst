@@ -136,9 +136,11 @@ It is important to know that ``chron`` will not load your ``~/.bashrc`` or any o
 
 Network-file-system
 ===================
+File-systems are extraordinary powerful. So let's make use of them.
 
 map and reduce in parallel computing
--------------------------------------
+------------------------------------
+I use the filesystem extensively to do the ``map`` and the ``reduce`` in my parallel computing on a compute-cluster with job-queues.
 
 atomic move
 -----------
