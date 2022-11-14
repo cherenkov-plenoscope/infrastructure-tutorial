@@ -160,10 +160,15 @@ qlogin
 Not all clusters have ``qlogin``. It allows you to loin to a worker-node. This can be very useful for debuging to explore the environment present on the worker-node to find out why some of your programs do not run the way they do when you login into the gateway.
 
 
-chron
+cron
 =====
-The program chron can be used to execute your commands on the remote in certain time-intervalls without the need for you to log into the remote. I use ``chron`` e.g. to do automatic backups of my ``github.com`` repositories to our institute's storage.
-It is important to know that ``chron`` will not load your ``~/.bashrc`` or any other settings of your environment when it executes your command.
+The program ``cron`` can be used to execute your commands on the remote in certain time-intervalls without the need for you to log into the remote. I use ``cron`` e.g. to do automatic backups of my ``github.com`` repositories to our institute's storage.
+It is important to know that ``cron`` will not load your ``~/.bashrc`` or any other settings of your environment when it executes your command. 
+
+My configuration in ``~/.crontab.txt``
+
+::
+    43 0 * * 0 /home/user/anaconda3/bin/python3.7 /home/user/.github_backup.py my-organization /bulk/user/.backup/%Y-%m-%d_%H-%M-%S_my-organization.tar >> /home/user/.github_backup.log 2>&1
 
 
 Network-file-system
