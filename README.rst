@@ -203,6 +203,11 @@ and then finally perform the atomic move
 To abstract this away, I made a tiny ``python`` network-file-system-library_ to have a safe ``nfs.copy()`` and ``nfs.move()``.
 
 
+Tape-archive
+============
+The tape-archive ``.tar`` is one of my personal superheros when it comes to computing. Just like a filesystem it allows you to structure your data and set up a hirachy of your choice that helps you to organize. But unlike a directory in your filesystem it has the advantage that it is more portable and can easier be moved to other machines. Further it might help you to reduce the number of objects in your filesystem by writing many files into one ``tar``.
+
+
 .. _network-file-system-library: https://github.com/cherenkov-plenoscope/network_file_system
 
 .. _Dask: https://docs.dask.org/en/latest/
