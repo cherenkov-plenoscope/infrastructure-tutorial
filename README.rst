@@ -168,7 +168,8 @@ It is important to know that ``cron`` will not load your ``~/.bashrc`` or any ot
 My configuration in ``~/.crontab.txt``
 
 ::
-    43 0 * * 0 /home/user/anaconda3/bin/python3.7 /home/user/.github_backup.py my-organization /bulk/user/.backup/%Y-%m-%d_%H-%M-%S_my-organization.tar >> /home/user/.github_backup.log 2>&1
+
+        43 0 * * 0 /home/user/anaconda3/bin/python3.7 /home/user/.github_backup.py my-organization /bulk/user/.backup/%Y-%m-%d_%H-%M-%S_my-organization.tar >> /home/user/.github_backup.log 2>&1
 
 
 Network-file-system
