@@ -7,17 +7,17 @@ Abstract
 Text-files
 ==========
 Most configurations on your local and remote computer are written in text-files.
-It is important that you are familiar with text-editors that run without a graphical-user-interface (GUI) in an x-server, but directly in the terminal. When you share text-files with others, who might use other editors, you must be aware of pitfalls regarding newlines and whitespaces.
+I often run text-editors without a graphical-user-interface, but directly in the terminal. When you share text-files with others, who might use different editors on different operating-systems, you must be aware of pitfalls regarding newlines and whitespaces.
 
 Newlines
 --------
 A big pitfall with text-files are the multiple ways to indicate that a newline is starting.
 The text-editors on your local machine might use a different newline indicator than your remote machine.
-Most common in the linux is the ``\n`` newline indicator. 
+Most common in linux is the ``\n`` newline indicator. 
 
 Whitespaces
 -----------
-Be aware that there a multiple whitespaces [``' '``, ``\t``, ``\eol``, ... ] which might be undistinguishable in some editors and viewers but that might effect your programs that read the text-file. To avoid surprises I usually make my text-editors show these explicitly.
+There are multiple whitespaces [``' '``, ``\t``, ``\eol``, ... ] which might be undistinguishable in some text-editors but that might effect your programs that read the text-file. To avoid surprises I usually make my text-editors show these explicitly.
 
 Text-editors and viewers that I use
 -----------------------------------
