@@ -98,8 +98,34 @@ This can be very useful for operating a remote instrument, such as a telescope, 
 Configure ``screen`` using the ``~/.screenrc``:
 
 ::
+    #startup_message off
+    defscrollback 4096
+    defutf8 on
 
-    some
+    bind + resize +1
+    bind - resize -1
+
+    shell bash
+    shelltitle "$ |bash"
+    hardstatus alwayslastline " [%0c] %-w%{= BW}%50>%n %t%{-}%+w %= %h "
+
+    nethack on
+
+    chdir /home/user
+    screen -t "home"
+
+    chdir /home/user/kit
+    screen -t "kit"
+
+    screen -t "run"
+
+    screen -t "git"
+
+    chdir /space/l8/super/user
+    screen -t "out"
+
+    chdir /space/l8/super/user/.backup
+    screen -t "backup"
 
 
 job-queues
