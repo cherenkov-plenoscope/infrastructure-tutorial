@@ -98,6 +98,7 @@ This can be very useful for operating a remote instrument, such as a telescope, 
 Configure ``screen`` using the ``~/.screenrc``:
 
 ::
+
     #startup_message off
     defscrollback 4096
     defutf8 on
@@ -108,8 +109,6 @@ Configure ``screen`` using the ``~/.screenrc``:
     shell bash
     shelltitle "$ |bash"
     hardstatus alwayslastline " [%0c] %-w%{= BW}%50>%n %t%{-}%+w %= %h "
-
-    nethack on
 
     chdir /home/user
     screen -t "home"
