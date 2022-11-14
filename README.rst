@@ -155,6 +155,11 @@ Note that the  sun-grid-engine's ``qstat`` can return machine readable output us
 With this you can inspect and organize your jobs on your own when you have more complicated demands than emberrasingly simple parallel computes. There is a python-parser for qstat_. 
 
 
+qlogin
+------
+Not all clusters have ``qlogin``. It allows you to loin to a worker-node. This can be very useful for debuging to explore the environment present on the worker-node to find out why some of your programs do not run the way they do when you login into the gateway.
+
+
 chron
 =====
 The program chron can be used to execute your commands on the remote in certain time-intervalls without the need for you to log into the remote. I use ``chron`` e.g. to do automatic backups of my ``github.com`` repositories to our institute's storage.
